@@ -44,11 +44,11 @@ jobs:
         name: screenshots
         path: screenshots/
         
-    - name: Upload a test Report
+    - name: Upload a HTML Report
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: Test Report
+        name: html-report
         path: report.html
         
 
