@@ -21,7 +21,7 @@ public class LoginDataProvider {
 	public Iterator<Object[]> loginDataProvider() throws FileNotFoundException{
 	
 	Gson gson = new Gson();
-	File testdatafile = new File(System.getProperty("user.dir") + "//TestData//loginData.json");
+	File testdatafile = new File(System.getProperty("user.dir") + "//TestData//logindata.json");
 	FileReader fileReader = new FileReader(testdatafile);
 	TestData data = gson.fromJson(fileReader,TestData.class);
 	List <Object[]>datatoReturn = new ArrayList<Object[]>();
@@ -35,7 +35,7 @@ public class LoginDataProvider {
 	@DataProvider(name = "LoginTestCSVDataProvider")
 	public Iterator<User> loginCSVDataProvider()
 	{
-		return CsvReaderUtility.readCSVFile("loginData.csv");
+		return CsvReaderUtility.readCSVFile("logindata.csv");
 		
 	}
 
