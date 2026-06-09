@@ -10,7 +10,7 @@ name: Test Automation Workflow
 
 on :
    schedule:
-   - cron: '30 23 * * *'
+     - cron: '30 23 * * *'
   push:
     branches: [ "master" ]
   pull_request:
@@ -38,7 +38,7 @@ jobs:
         path: logs/
     - name: Upload a test Report
       if: always()
-      uses: actions/upload-artifact@v7.0.1
+      uses: actions/upload-artifact@v4
       with:
         name: Test logs
         path: report.html
