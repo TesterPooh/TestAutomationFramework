@@ -49,7 +49,7 @@ public void logintest(User user) {
 "LoginTestCSVDataProvider" ) public void loginCSVtest(User user) {
 
 
- assertEquals (homepage.gotoLoginPage().doLoginWith(user.getEmailaddress(),
+ assertEquals (homePage.gotoLoginPage().doLoginWith(user.getEmailaddress(),
 user.getPassword()).getUserName(), "Pooh nemade");
 
  }
@@ -63,7 +63,7 @@ user.getPassword()).getUserName(), "Pooh nemade");
 com.ui.dataproviders.LoginDataProvider.class,dataProvider =
  "LoginTestxlsDataProvider", retryAnalyzer =
  com.ui.listeners.MyRetryAnalyzer.class ) public void loginxlstest(User user)
- {  assertEquals (homepage.gotoLoginPage().doLoginWith(user.getEmailaddress(),
+ {  assertEquals (homePage.gotoLoginPage().doLoginWith(user.getEmailaddress(),
  user.getPassword()).getUserName(), "Pooh nemade");
  
 
